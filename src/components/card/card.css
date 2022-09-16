@@ -1,0 +1,47 @@
+.cardContainer {
+  align-items: center;
+  background: green;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  min-height: 50px;
+  padding: 10px 20px;
+  width: 90%;
+}
+
+button {
+  padding: 10px;
+  display: inline-block;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.contentContainer{
+    width: 85%
+}
+.contentContainer > p {
+    margin: 1em 1em 1em 0;
+}
+
+.buttonContainer{
+    width: 15%;
+    display: inline-flex;
+    justify-content: center;
+    min-width: 150px;
+}
+
+button:first-child {
+  margin: 0 10px 0 0;
+  background-color: honeydew;
+}
+button:last-child {
+  background-color: #cc1d1d;
+  color: white;
+}
+
+button:first-child:hover {
+  background-color: #a8b3a8;
+}
+button:last-child:hover {
+  background-color: #962626;
+}
