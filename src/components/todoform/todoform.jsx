@@ -1,10 +1,15 @@
 import React from "react";
+
+import { useDispatch } from "react-redux";
+import { addTask } from "../../redux/taskSlice";
+
 import "./todoform.css";
 
 function TodoForm() {
-  const [task, setTask] = React.useState({});
   const titleRef = React.useRef();
   const descriptionRef = React.useRef();
+
+  const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,9 +23,13 @@ function TodoForm() {
         todoDetail.description = e.target.todoDescription.value;
       }
     }
-    setTask(todoDetail);
-    titleRef.current.value = ""
-    descriptionRef.current.value = ""
+    dispatch(
+      addTask({
+        task: todoDetail,
+      })
+    );
+    titleRef.current.value = "";
+    descriptionRef.current.value = "";
   };
 
   return (
@@ -47,7 +56,7 @@ function TodoForm() {
             placeholder="Escriba una descripción de la tarea si lo desea."
           />
         </div>
-        <input className="submit" type="submit" value="Agregar Tarea"/>
+        <input className="submit" type="submit" value="Agregar Tarea" />
       </form>
     </div>
   );
