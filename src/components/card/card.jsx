@@ -21,8 +21,8 @@ function TodoCard({ task, id }) {
   return (
     <div className="cardContainer">
       <div className="contentContainer">
-        <h4>{task.detail.title} </h4>
-        <p>{task.detail.description}</p>
+        <h4>{task?.detail?.title} </h4>
+        <p>{task?.detail?.description}</p>
       </div>
 
       <div className="buttonContainer">
