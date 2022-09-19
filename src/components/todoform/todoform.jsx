@@ -17,9 +17,9 @@ function TodoForm() {
       title: "",
       description: "",
     };
-    if (e.target.todoTitle.value) {
+    if (e?.target?.todoTitle?.value) {
       todoDetail.title = e.target.todoTitle.value;
-      if (e.target.todoDescription.value) {
+      if (e?.target?.todoDescription?.value) {
         todoDetail.description = e.target.todoDescription.value;
       }
     }

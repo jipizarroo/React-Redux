@@ -6,18 +6,21 @@ import { Provider } from 'react-redux'
 import taskReducer from "./taskSlice";
 
 export function renderWithProviders(
+  
   ui,
   {
-    initialState = [{id: 0, detail: {title: "Tarea 1", description: "Tarea 1 inicializada en el store de redux."}}],
+    preloadedState,
     // Automatically create a store instance if no store was passed in
-    store = configureStore({ reducer: { task: taskReducer }, initialState }),
+    store = configureStore({ reducer: { tasks: taskReducer }, preloadedState}),
     ...renderOptions
   } = {}
+  
 ) {
   function Wrapper({ children }) {
     return <Provider store={store}>{children}</Provider>
   }
 
+  
   // Return an object with the store and all of RTL's query functions
   return { store, ...render(ui, { wrapper: Wrapper, ...renderOptions }) }
 }

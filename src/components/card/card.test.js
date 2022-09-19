@@ -12,7 +12,7 @@ const cardData = {
 };
 
 describe("TodoCard", () => {
-  test("Should render", async () => {
+  test("Should render as expected with data passed.", async () => {
     renderWithProviders(<TodoCard task={cardData} id={cardData.id} />);
     const title = screen.getByText("Tarea 1");
     const description = screen.getByText("Mostrando description de la tarea");

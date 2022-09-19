@@ -1,8 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+
+
 export const taskSlice = createSlice({
   name: "tasks",
-  initialState: [{id: 0, detail: {title: "Tarea 1", description: "Tarea 1 inicializada en el store de redux."}}],
+  initialState: [],
   reducers: {
     addTask: (state, action) => {
       const newTask = {
