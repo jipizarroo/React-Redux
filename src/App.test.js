@@ -1,6 +1,5 @@
 import App from "./App";
-import { screen, waitFor, cleanup } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
+import { screen } from "@testing-library/react";
 import { renderWithProviders } from "./redux/testStore";
 
 const testData = {
@@ -43,7 +42,7 @@ describe("TodoCard", () => {
   test("Should render with data stored on Redux", async () => {
     const preloadedState = {tasks: [testData]}
 
-    const { renderedData } = renderWithProviders(<App />, {preloadedState});
+    renderWithProviders(<App />, {preloadedState});
 
     const title = screen.getByText("Tarea 1");
     const description = screen.getByText(

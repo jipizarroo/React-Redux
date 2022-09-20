@@ -16,7 +16,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --watchAll",
-    "test:coverage": "react-scripts test --coverage",
+    "test:coverage": "react-scripts test --coverage --watchAll",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -39,5 +39,9 @@
   },
   "devDependencies": {
     "@testing-library/react": "^13.4.0"
-  }
-}
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "!src/index.js"
+    ]
+}}

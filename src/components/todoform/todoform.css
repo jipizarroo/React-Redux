@@ -30,5 +30,12 @@ label {
 .submit {
   height: 50px;
   margin: auto 0;
+  background: #e0fbfc;
+  border: 0;
+  border-radius: 10px;
 }
+.submit:hover{
+  background: #98c1d9;
+}
+
 
