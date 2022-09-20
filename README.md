@@ -1,4 +1,8 @@
 # Prueba Técnica front-end de Javier Pizarro.
+
+`npm --version = 7.24.2`
+`node --version = v16.4.2`
+
 # Scripts disponibles.
 ### `npm start`
 
